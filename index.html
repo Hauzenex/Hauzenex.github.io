@@ -2,8 +2,20 @@
   Hewwo Cringe nerds my name is Hauzenex and i am a crig nerd es<br>
   Oh yea yourmom is the biggest cringe nerd oh<br>
   <b>OH LOOK OUT A TEST IMAGE CRIG<br></b><br>
+  <canvas id = "gameCanvas" width="500" height="350"></canvas>
+
 <script>
+var canvas
+var canvasContext;
+
+window.onload = function() {
   console.log("cringe consoles are cringe es");
+  canvas = document.getElementById('gameCanvas');
+  canvasContext = canvas.getContext('2d');
+  canvasContext.fillStyle = 'black';
+  canvasContext.fillRect(0,0,canvas.width,canvas.height);
+}
+
   </script>
 
 </html>
