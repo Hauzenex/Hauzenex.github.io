@@ -11,6 +11,13 @@ body {
   background-size: 25% 25%;
   </style>
 <script>
+
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://api.countapi.xyz/hit/hauzenex.github.io/visits");
+xhr.responseType = "json";
+xhr.onload = function() {
+    document.getElementById('visits').innerText = this.response.value;
+
 window.onload=function() {
     canv=document.getElementById("1");
     ctx=canv.getContext("2d");
@@ -100,11 +107,7 @@ crig t
 <p>
   <img src="https://raw.githubusercontent.com/Hauzenex/Hauzenex.github.io/main/tommy%20nerd%20es.png" />
 </p>
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "https://api.countapi.xyz/hit/hauzenex.github.io/visits");
-xhr.responseType = "json";
-xhr.onload = function() {
-    document.getElementById('visits').innerText = this.response.value;
+
 }
 xhr.send();
  </body>
