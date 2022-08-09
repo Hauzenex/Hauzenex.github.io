@@ -1,0 +1,35 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+	<title>Novo Projeto</title>
+	<defs>
+		<image  width="800" height="500" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAH0AQMAAAD/jts7AAAAAXNSR0IB2cksfwAAAANQTFRFBhcMr8KJ1QAAAEhJREFUeJztwQENAAAAwqD3T20ON6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAZwPFRAABYFd/SgAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+		tspan { white-space:pre } 
+		.t0 { font-size: 31px;fill: #2ecc71;font-weight: 400;font-family: "Elianto-Regular", "Elianto" } 
+	</style>
+	<use id="Background" href="#img1" x="0" y="0"/>
+	<text id="this is a image not a because id" style="transform: matrix(1,0,0,1,19,56)" >
+		<tspan x="0" y="0" class="t0">this is a image not a because idk how to load
+</tspan>
+		<tspan x="0" y="37.2" class="t0">that trash font on that nerd site so....
+</tspan>
+		<tspan x="0" y="111.6" class="t0">this website is Hauzenex website and i am
+</tspan>
+		<tspan x="0" y="148.8" class="t0">Hauzenex and i dont know code just a little
+</tspan>
+		<tspan x="0" y="186" class="t0">so i don't know what to put of interesting in
+</tspan>
+		<tspan x="0" y="223.2" class="t0">that website but i will try to put some...
+</tspan>
+		<tspan x="0" y="260.4" class="t0">&quot;interesting&quot; things here like mineland things
+</tspan>
+		<tspan x="0" y="297.6" class="t0">or someting else because  don't know maybe
+</tspan>
+		<tspan x="0" y="334.8" class="t0">because i want and its not your business
+</tspan>
+		<tspan x="0" y="372" class="t0">cring nerd you are so crig imagine being
+</tspan>
+		<tspan x="0" y="409.2" class="t0">that kinda of crig es
+</tspan>
+	</text>
+</svg>
