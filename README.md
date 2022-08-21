@@ -1,3 +1,3 @@
 <p align="center">
-  <img src="(../Images/anothercrig.png)"/>
+  <img src: url("../Images/anothercrig.png")/>
 </p>
