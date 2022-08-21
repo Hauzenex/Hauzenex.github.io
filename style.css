@@ -1,11 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-
+*
 .count {
     font-size: 10em!important;
     text-shadow: 1px 1px 10px black
