@@ -1,1 +1,1 @@
-![anothercrig](anothercrig.png)
+![plot](./Images/anothercrig.png)
