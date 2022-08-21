@@ -1,9 +1,4 @@
 *
-.count {
-    font-size: 10em!important;
-    text-shadow: 1px 1px 10px black
-}
-
 .counter {
     min-width: 300px;
     background: #111;
