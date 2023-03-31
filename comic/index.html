@@ -8,65 +8,26 @@
     <title>not funi didnt laff</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="/Images/claudemir.png">
-    <script>
-const slideGallery = document.querySelector('.slides');
-const slides = slideGallery.querySelectorAll('div');
-const scrollbarThumb = document.querySelector('.thumb');
-const slideCount = slides.length;
-const slideHeight = 720;
-const marginTop = 16;
-
-const scrollThumb = () => {
-  const index = Math.floor(slideGallery.scrollTop / slideHeight);
-  scrollbarThumb.style.height = `${((index + 1) / slideCount) * slideHeight}px`;
-};
-
-const scrollToElement = el => {
-  const index = parseInt(el.dataset.id, 10);
-  slideGallery.scrollTo(0, index * slideHeight + marginTop);
-};
-
-document.querySelector('.thumbnails').innerHTML += [...slides]
-  .map(
-    (slide, i) => `<img src="${slide.querySelector('img').src}" data-id="${i}">`
-  )
-  .join('');
-
-document.querySelectorAll('.thumbnails img').forEach(el => {
-  el.addEventListener('click', () => scrollToElement(el));
-});
-
-slideGallery.addEventListener('scroll', e => scrollThumb());
-
-scrollThumb();
-    </script>
 </head>
 <body>
-<div class="gallery-container">
-  <div class="thumbnails"></div>
-  <div class="scrollbar">
-    <div class="thumb"></div>
-  </div>
-  <div class="slides">
-    <div><img src="./1.png"></div>
-    <div><img src="./2.png"></div>
-    <div><img src="./3.png"></div>
-    <div><img src="./4.png"></div>
-    <div><img src="./5.png"></div>
-    <div><img src="./6.png"></div>
-    <div><img src="./7.png"></div>
-    <div><img src="./8.png"></div>
-    <div><img src="./9.png"></div>
-    <div><img src="./10.png"></div>
-    <div><img src="./11.png"></div>
-    <div><img src="./12.png"></div>
-    <div><img src="./13.png"></div>
-    <div><img src="./14.png"></div>
-    <div><img src="./15.png"></div>
-    <div><img src="./16.png"></div>
-    <div><img src="./17.png"></div>
-    <div><img src="./18.png"></div>
-    <div><img src="./19.png"></div>
-  </div>
-</div></body>
+<img src=”./1.png” alt=”Image”>
+<img src=”./2.png” alt=”Image”>
+<img src=”./3.png” alt=”Image”>
+<img src=”./4.png” alt=”Image”>
+<img src=”./5.png” alt=”Image”>
+<img src=”./6.png” alt=”Image”>
+<img src=”./7.png” alt=”Image”>
+<img src=”./8.png” alt=”Image”>
+<img src=”./9.png” alt=”Image”>
+<img src=”./10.png” alt=”Image”>
+<img src=”./11.png” alt=”Image”>
+<img src=”./12.png” alt=”Image”>
+<img src=”./13.png” alt=”Image”>
+<img src=”./14.png” alt=”Image”>
+<img src=”./15.png” alt=”Image”>
+<img src=”./16.png” alt=”Image”>
+<img src=”./17.png” alt=”Image”>
+<img src=”./18.png” alt=”Image”>
+<img src=”./19.png” alt=”Image”>
+</body>
 </html>
