@@ -1,0 +1,4 @@
+syne tactile
+and also 1 byte can store
+or a 0 or a 1
+it cant store not even 1 single unicode on it
