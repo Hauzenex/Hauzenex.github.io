@@ -23,7 +23,16 @@ body {
   width: 30%;
 }
 </style>
+<script>
+ const cars = ["backup.png","nefile.png"];
+  let randomIndex =
+    Math.floor(
+      Math.random() * cars.length
+    );
+  car.src = cars[randomIndex];
+</script>
 <body>
     <img src="/shialebouf.png" alt="my name" class="center">
+    <img id="car"></img>
 </body>
 </html>
