@@ -45,10 +45,19 @@ body {
 	display: block;
 	text-decoration: none;
 	padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+	transition: opacity 400ms ease;
 }
 
 #noez {
 	margin-left: clamp(1rem, 0vw, 48rem);
+}
+
+#noez:hover > .noez {
+	opacity: 0.3;
+}
+
+#noez:hover > .noez:hover {
+	opacity: 1;
 }
 
 </style>
