@@ -12,8 +12,7 @@
 }
 
 .container .title{
-  font-size: 25px;
-  background-color: #000;
+  font-size: 48px;
   color:#fff;
   border-radius: 5px;
   margin-bottom: 10px;
@@ -22,7 +21,7 @@
 }
 
 .container .image-container{
-  columns:3 250px;
+  columns:3 200px;
   gap:15px;
 }
 
