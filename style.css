@@ -3,7 +3,6 @@ a:link {
   background-color: transparent;
   text-decoration: none;
   font-size: 20px
-  font-family: "Courier New", Courier,
 }
 
 a:visited {
@@ -11,7 +10,6 @@ a:visited {
   background-color: transparent;
   text-decoration: none;
   font-size: 20px
-  font-family: "Courier New", Courier,
 }
 
 a:hover {
@@ -19,7 +17,6 @@ a:hover {
   background-color: transparent;
   text-decoration: none;
   font-size: 20px
-  font-family: "Courier New", Courier,
 }
 
 a:active {
@@ -27,5 +24,4 @@ a:active {
   background-color: transparent;
   text-decoration: none;
   font-size: 20px
-  font-family: "Courier New", Courier,
 }
