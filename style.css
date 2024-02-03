@@ -2,26 +2,26 @@ a:link {
   color: black;
   background-color: transparent;
   text-decoration: none;
+  font-size: 300px
 }
 
 a:visited {
   color: black;
   background-color: transparent;
   text-decoration: none;
+  font-size: 300px
 }
 
 a:hover {
   color: red;
   background-color: transparent;
   text-decoration: none;
+  font-size: 300px
 }
 
 a:active {
   color: red;
   background-color: transparent;
   text-decoration: none;
-}
-
-a {
   font-size: 300px
 }
