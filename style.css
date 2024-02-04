@@ -37,5 +37,5 @@ a:active {
 }
 
 .linkcontainer div {
-  margin-bottom: 10px; /* make the links not touch eachother skull */
+  margin-bottom: 5px; /* make the links not touch eachother skull */
 }
