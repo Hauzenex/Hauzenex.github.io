@@ -35,3 +35,7 @@ a:active {
   font-size: 20px
   
 }
+
+.linkcontainer div {
+  margin-bottom: 10px; /* make the links not touch eachother skull */
+}
