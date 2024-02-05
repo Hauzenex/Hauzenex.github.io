@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded', function() {
   var hoverImage = document.getElementById('hover-image');
 
   var links = [
-    { text: 'Hauzenex', url: 'snake.html', image: '/Images/sono.png' },
+    { text: 'Hauzenex', url: 'https://youtube.com/@Hauzenex', image: '/Images/sono.png' },
     { text: 'Housenex', url: 'pmdfr.txt', image: 'image2.jpg' },
     { text: 'Horsenex', url: 'profile-challenge.txt', image: 'image3.jpg' },
     // add more links with their image
