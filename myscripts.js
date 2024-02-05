@@ -15,7 +15,7 @@ window.addEventListener('DOMContentLoaded', function() {
     { text: 'Link 12', url: 'https://example.com/link12' }
   ];
 
-  var columnCount = 4; // Number of columns
+  var columnCount = 2; // Number of columns
   var linksPerColumn = Math.ceil(links.length / columnCount);
 
   for (var i = 0; i < columnCount; i++) {
@@ -26,7 +26,11 @@ window.addEventListener('DOMContentLoaded', function() {
       var link = document.createElement('a');
       link.href = links[j].url;
       link.textContent = links[j].text;
-      column.appendChild(link);
+
+      var paragraph = document.createElement('p');
+      paragraph.appendChild(link);
+
+      column.appendChild(paragraph);
     }
 
     linkContainer.appendChild(column);
