@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', function() {
     // add more links with their image
   ];
 
-  var columnCount = 2; // number of columns
+  var columnCount = 3; // number of columns
   var linksPerColumn = Math.ceil(links.length / columnCount);
 
   for (var i = 0; i < columnCount; i++) {
