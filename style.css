@@ -42,10 +42,28 @@ a:active {
 
 .column {
   float: left;
-  width: 260px; /* width of the columns */
-  margin-right: 20px; /* space between each column */
+  width: 250px; /* width of each column */
+  margin-right: 10px; /* space between each column */
 }
 
 .clear {
   clear: both;
+}
+
+#image-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 30%; /* width of image container */
+  background-color: rgba(0, 0, 0, 0.8); /* background color and opacity */
+  display: none;
+  z-index: 9999;
+}
+
+#hover-image {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  display: block;
 }
