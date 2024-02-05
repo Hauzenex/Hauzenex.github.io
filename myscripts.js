@@ -1,18 +1,18 @@
 window.addEventListener('DOMContentLoaded', function() {
   var linkContainer = document.getElementById('link-container');
   var links = [
-    { text: 'Link 1', url: 'https://example.com/link1' },
-    { text: 'Link 2', url: 'https://example.com/link2' },
-    { text: 'Link 3', url: 'https://example.com/link3' },
-    { text: 'Link 4', url: 'https://example.com/link4' },
-    { text: 'Link 5', url: 'https://example.com/link5' },
-    { text: 'Link 6', url: 'https://example.com/link6' },
-    { text: 'Link 7', url: 'https://example.com/link7' },
-    { text: 'Link 8', url: 'https://example.com/link8' },
-    { text: 'Link 9', url: 'https://example.com/link9' },
-    { text: 'Link 10', url: 'https://example.com/link10' },
-    { text: 'Link 11', url: 'https://example.com/link11' },
-    { text: 'Link 12', url: 'https://example.com/link12' }
+    { text: 'Hauzenex', url: 'https://example.com/link1' },
+    { text: 'Text Test', url: 'https://example.com/link2' },
+    { text: 'Uhm actually', url: 'https://example.com/link3' },
+    { text: ':skull_and_crossbones:', url: 'https://example.com/link4' },
+    { text: 'oh no bro so nerdy', url: 'https://example.com/link5' },
+    { text: 'yeah cringe like', url: 'https://example.com/link6' },
+    { text: 'this will send to link 7', url: 'https://example.com/link7' },
+    { text: 'coding is hard', url: 'https://example.com/link8' },
+    { text: 'test testing', url: 'https://example.com/link9' },
+    { text: 'tetris tetris (scam)', url: 'https://example.com/link10' },
+    { text: 'scam and scan', url: 'https://example.com/link11' },
+    { text: 'i scanned this scam', url: 'https://example.com/link12' }
   ];
 
   var columnCount = 4; // Number of columns
