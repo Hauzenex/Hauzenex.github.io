@@ -1,31 +1,11 @@
 window.addEventListener('DOMContentLoaded', function() {
   var linkContainer = document.getElementById('link-container');
   var links = [
-    { text: 'Hauzenex', url: 'https://example.com/link1' },
-    { text: 'Text Test', url: 'https://example.com/link2' },
-    { text: 'Uhm actually', url: 'https://example.com/link3' },
-    { text: ':skull_and_crossbones:', url: 'https://example.com/link4' },
-    { text: 'oh no bro so nerdy', url: 'https://example.com/link5' },
-    { text: 'yeah cringe like', url: 'https://example.com/link6' },
-    { text: 'this will send to link 7', url: 'https://example.com/link7' },
-    { text: 'coding is hard', url: 'https://example.com/link8' },
-    { text: 'test testing', url: 'https://example.com/link9' },
-    { text: 'tetris tetris (scam)', url: 'https://example.com/link10' },
-    { text: 'scam and scan', url: 'https://example.com/link11' },
-    { text: 'i scanned this scam', url: 'https://example.com/link12' },
-    { text: 'Uhm actually', url: 'https://example.com/link3' },
-    { text: ':skull_and_crossbones:', url: 'https://example.com/link4' },
-    { text: 'oh no bro so nerdy', url: 'https://example.com/link5' },
-    { text: 'yeah cringe like', url: 'https://example.com/link6' },
-    { text: 'this will send to link 7', url: 'https://example.com/link7' },
-    { text: 'coding is hard', url: 'https://example.com/link8' },
-    { text: 'test testing', url: 'https://example.com/link9' },
-    { text: 'tetris tetris (scam)', url: 'https://example.com/link10' },
-    { text: 'scam and scan', url: 'https://example.com/link11' },
-    { text: 'i scanned this scam', url: 'https://example.com/link12' }
+    { text: 'My youtube channel', url: 'https://youtube.com/@Hauzenex' },
+    { text: 'Snake game (not mine)', url: 'snake.html' },
   ];
 
-  var columnCount = 4; // Number of columns
+  var columnCount = 4; // number of columns
   var linksPerColumn = Math.ceil(links.length / columnCount);
 
   for (var i = 0; i < columnCount; i++) {
