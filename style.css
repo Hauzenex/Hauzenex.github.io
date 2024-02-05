@@ -42,7 +42,7 @@ a:active {
 
 .column {
   float: left;
-  width: 200px; /* width of the columns */
+  width: 260px; /* width of the columns */
   margin-right: 20px; /* space between each column */
 }
 
