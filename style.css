@@ -40,14 +40,12 @@ a:active {
   
 }
 
-.column-container {
-  display: flex;
-  flex-wrap: wrap;
+.column {
+  float: left;
+  width: 200px; /* Adjust the width of each column as needed */
+  margin-right: 20px; /* Adjust the spacing between columns as needed */
 }
 
-.column {
-  flex: 1 1 200px; /* Adjust the width of each column as needed */
-  margin-right: 100px; /* Adjust the spacing between columns as needed */
-  display: block;
-  margin-bottom: 10px; /* Adjust the spacing between links as needed */
+.clear {
+  clear: both;
 }
