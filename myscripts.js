@@ -1,11 +1,16 @@
 window.addEventListener('DOMContentLoaded', function() {
   var linkContainer = document.getElementById('link-container');
+  var imageContainer = document.getElementById('image-container');
+  var hoverImage = document.getElementById('hover-image');
+
   var links = [
-    { text: 'My youtube channel', url: 'https://youtube.com/@Hauzenex' },
-    { text: 'Snake game (not mine)', url: 'snake.html' }
+    { text: 'Hauzenex', url: 'snake.html', image: '/Images/sono.png' },
+    { text: 'Housenex', url: 'pmdfr.txt', image: 'image2.jpg' },
+    { text: 'Horsenex', url: 'profile-challenge.txt', image: 'image3.jpg' },
+    // add more links with their image
   ];
 
-  var columnCount = 4; // number of columns
+  var columnCount = 2; // number of columns
   var linksPerColumn = Math.ceil(links.length / columnCount);
 
   for (var i = 0; i < columnCount; i++) {
@@ -16,11 +21,19 @@ window.addEventListener('DOMContentLoaded', function() {
       var link = document.createElement('a');
       link.href = links[j].url;
       link.textContent = links[j].text;
+      link.setAttribute('data-image', links[j].image);
 
-      var paragraph = document.createElement('p');
-      paragraph.appendChild(link);
+      link.addEventListener('mouseover', function(event) {
+        var imageUrl = event.target.getAttribute('data-image');
+        hoverImage.src = imageUrl;
+        imageContainer.style.display = 'block';
+      });
 
-      column.appendChild(paragraph);
+      link.addEventListener('mouseout', function() {
+        imageContainer.style.display = 'none';
+      });
+
+      column.appendChild(link);
     }
 
     linkContainer.appendChild(column);
