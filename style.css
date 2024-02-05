@@ -57,7 +57,9 @@ a:active {
   bottom: 0;
   width: 30%; /* width of image container */
   background-color: rgba(0, 0, 0, 0.8); /* background color and opacity */
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 9999;
 }
 
