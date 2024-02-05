@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', function() {
   var linkContainer = document.getElementById('link-container');
   var links = [
     { text: 'My youtube channel', url: 'https://youtube.com/@Hauzenex' },
-    { text: 'Snake game (not mine)', url: 'snake.html' },
+    { text: 'Snake game (not mine)', url: 'snake.html' }
   ];
 
   var columnCount = 4; // number of columns
