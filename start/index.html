@@ -3,210 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>game</title>
+    <title>Buttons Page</title>
     <style>
         body {
             margin: 0;
             background-color: black;
-            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        
+        button {
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background-color 0.3s;
         }
 
-        canvas {
-            display: block;
-            margin: 0 auto;
-            background-color: #222;
-            border: 2px solid white;
+        button:hover {
+            background-color: #f0f0f0;
         }
     </style>
 </head>
 <body>
-    <canvas id="gameCanvas"></canvas>
-
-    <script>
-const lgame = document.getElementById('gameCanvas');
-const lgameCtx = lgame.getContext('2d');
-
-lgame.width = window.innerWidth;
-lgame.height = window.innerHeight;
-
-const lgameSnake = [];
-const lgameSnakeLength = 100;
-const lgameSegmentSize = 40;
-let lgameRedSquareX = 0;
-let lgameRedSquareY = 0;
-
-let lgameExitCount = 0;
-let lgameTouchCount = 0;
-const lgameMaxExits = 3;
-const lgameMaxTouches = 3;
-let lgameRedirected = false;
-
-for (let lgameI = 0; lgameI < lgameSnakeLength; lgameI++) {
-    lgameSnake.push({ x: lgame.width / 2, y: lgame.height / 2 });
-}
-
-const lgameKeyMap = {
-    ArrowUp: false,
-    ArrowDown: false,
-    ArrowLeft: false,
-    ArrowRight: false,
-    w: false,
-    a: false,
-    s: false,
-    d: false
-};
-
-window.addEventListener('keydown', (lgameEvent) => {
-    if (lgameKeyMap.hasOwnProperty(lgameEvent.key)) {
-        lgameKeyMap[lgameEvent.key] = true;
-    }
-});
-
-window.addEventListener('keyup', (lgameEvent) => {
-    if (lgameKeyMap.hasOwnProperty(lgameEvent.key)) {
-        lgameKeyMap[lgameEvent.key] = false;
-    }
-});
-
-window.addEventListener('mousemove', (lgameEvent) => {
-    lgameRedSquareX = lgameEvent.clientX;
-    lgameRedSquareY = lgameEvent.clientY;
-});
-
-let lgameCounter = 0;
-
-setInterval(() => {
-    if (!lgameRedirected) {
-        lgameCounter += 0.5;
-    }
-}, 1000);
-
-const lgameFallingTetrominoes = [];
-
-const lgameTetrominoes = [
-    { shape: [[1, 1, 1], [0, 1, 0]], color: 'white' },
-    { shape: [[1, 1, 0], [0, 1, 1]], color: 'white' },
-    { shape: [[0, 1, 1], [1, 1, 0]], color: 'white' },
-    { shape: [[1, 0, 0], [1, 1, 1]], color: 'white' },
-    { shape: [[0, 0, 1], [1, 1, 1]], color: 'white' },
-    { shape: [[1, 1, 1, 1]], color: 'white' },
-    { shape: [[1, 1], [1, 1]], color: 'white' }
-];
-
-function lgameSpawnTetromino() {
-    const lgameTetromino = lgameTetrominoes[Math.floor(Math.random() * lgameTetrominoes.length)];
-    const lgameX = Math.random() * (lgame.width - 100) + 50;
-    lgameFallingTetrominoes.push({ x: lgameX, y: 0, shape: lgameTetromino.shape, color: lgameTetromino.color });
-}
-
-function lgameCheckTetrominoCollision() {
-    for (const lgameTetromino of lgameFallingTetrominoes) {
-        for (let lgameRow = 0; lgameRow < lgameTetromino.shape.length; lgameRow++) {
-            for (let lgameCol = 0; lgameCol < lgameTetromino.shape[lgameRow].length; lgameCol++) {
-                if (lgameTetromino.shape[lgameRow][lgameCol] === 1) {
-                    const lgameSquareX = lgameTetromino.x + lgameCol * lgameSegmentSize;
-                    const lgameSquareY = lgameTetromino.y + lgameRow * lgameSegmentSize;
-                    
-                    if (lgameRedSquareX > lgameSquareX && lgameRedSquareX < lgameSquareX + lgameSegmentSize &&
-                        lgameRedSquareY > lgameSquareY && lgameRedSquareY < lgameSquareY + lgameSegmentSize) {
-                        lgameRedirected = true;
-                        window.location.href = 'https://hauzenex.github.io';
-                    }
-                }
-            }
-        }
-    }
-}
-
-function lgameCheckCollision() {
-    if (lgameRedSquareX < 0 || lgameRedSquareX > lgame.width || lgameRedSquareY < 0 || lgameRedSquareY > lgame.height) {
-        if (lgameExitCount < lgameMaxExits) {
-            lgameExitCount++;
-        }
-    }
-
-    for (const lgameSegment of lgameSnake) {
-        const lgameDistance = Math.sqrt((lgameSegment.x - lgameRedSquareX) ** 2 + (lgameSegment.y - lgameRedSquareY) ** 2);
-        if (lgameDistance < lgameSegmentSize) {
-            if (lgameTouchCount < lgameMaxTouches) {
-                lgameTouchCount++;
-            }
-        }
-    }
-
-    if ((lgameExitCount >= lgameMaxExits || lgameTouchCount >= lgameMaxTouches) && !lgameRedirected) {
-        lgameRedirected = true;
-        window.location.href = 'https://hauzenex.github.io';
-    }
-}
-
-function lgameDrawSnake() {
-    lgameCtx.clearRect(0, 0, lgame.width, lgame.height);
-
-    lgameCtx.font = 'bold 40px Arial';
-    lgameCtx.fillStyle = 'gray';
-    lgameCtx.textAlign = 'center';
-    lgameCtx.fillText("RULES: you touch green you die you touch white you die", lgame.width / 2, lgame.height / 2 - 100);
-
-    for (let lgameI = lgameSnake.length - 1; lgameI > 0; lgameI--) {
-        lgameSnake[lgameI].x = lgameSnake[lgameI - 1].x;
-        lgameSnake[lgameI].y = lgameSnake[lgameI - 1].y;
-    }
-
-    const lgameSmoothFactor = 0.4;
-    lgameSnake[0].x += (lgameRedSquareX - lgameSnake[0].x) * lgameSmoothFactor;
-    lgameSnake[0].y += (lgameRedSquareY - lgameSnake[0].y) * lgameSmoothFactor;
-
-    for (let lgameI = 0; lgameI < lgameSnake.length; lgameI++) {
-        lgameCtx.beginPath();
-        lgameCtx.arc(lgameSnake[lgameI].x, lgameSnake[lgameI].y, 5, 0, Math.PI * 2);
-        lgameCtx.fillStyle = 'lime';
-        lgameCtx.fill();
-        lgameCtx.closePath();
-    }
-
-    const lgameMoveSpeed = 5;
-    const lgameKeyboardSpeed = lgameMoveSpeed * 1.5;
-    if (lgameKeyMap['ArrowUp'] || lgameKeyMap['w']) {
-        lgameRedSquareY -= lgameKeyboardSpeed;
-    }
-    if (lgameKeyMap['ArrowDown'] || lgameKeyMap['s']) {
-        lgameRedSquareY += lgameKeyboardSpeed;
-    }
-    if (lgameKeyMap['ArrowLeft'] || lgameKeyMap['a']) {
-        lgameRedSquareX -= lgameKeyboardSpeed;
-    }
-    if (lgameKeyMap['ArrowRight'] || lgameKeyMap['d']) {
-        lgameRedSquareX += lgameKeyboardSpeed;
-    }
-
-    lgameCtx.fillStyle = 'red';
-    const lgameSquareSize = 10;
-    lgameCtx.fillRect(lgameRedSquareX, lgameRedSquareY, lgameSquareSize, lgameSquareSize);
-
-    for (const lgameTetromino of lgameFallingTetrominoes) {
-        lgameCtx.fillStyle = lgameTetromino.color;
-        for (let lgameRow = 0; lgameRow < lgameTetromino.shape.length; lgameRow++) {
-            for (let lgameCol = 0; lgameCol < lgameTetromino.shape[lgameRow].length; lgameCol++) {
-                if (lgameTetromino.shape[lgameRow][lgameCol] === 1) {
-                    const lgameSquareX = lgameTetromino.x + lgameCol * lgameSegmentSize;
-                    const lgameSquareY = lgameTetromino.y + lgameRow * lgameSegmentSize;
-                    lgameCtx.fillRect(lgameSquareX, lgameSquareY, lgameSegmentSize, lgameSegmentSize);
-                }
-            }
-        }
-        lgameTetromino.y += lgameSegmentSize;
-    }
-
-    lgameCheckTetrominoCollision();
-    lgameCheckCollision();
-    requestAnimationFrame(lgameDrawSnake);
-}
-
-lgameSpawnTetromino();
-setInterval(lgameSpawnTetromino, 2000);
-lgameDrawSnake();
-
-    </script>
+    <button onclick="window.location.href='https://www.youtube.com/@hauzenex'">My YouTube</button>
+    <button onclick="window.location.href='https://hauzenex.github.io/ratsel/laoding.html'">Puzzle</button>
 </body>
 </html>
