@@ -6,10 +6,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <style>
-body{font-family:Open Sans,Arial;
+body {
+  font-family:Open Sans,Arial;
+  padding: 25px;
+  background-color: white;
+  color: black;
+  font-size: 25px;
+}
+
+.darkmode {
+  background-color: black;
+  color: white;
+}
     </style>
 <body>
         <h1>Hauzenex</h1>
+    <button onclick="dm()">dark mode</button>
         <ul>
             <li>myself:
             <ul>
@@ -24,6 +36,12 @@ body{font-family:Open Sans,Arial;
         <p>to contact me go to my discord username "anooba"</p> 
 <hr>
     <address>made by: <a href="https://hauzenex.github.io">Hauzenex/Anooba</a> 04/01/2025 ddmmyyyy</address>
+<script>
+function dm() {
+   var element = document.body;
+   element.classList.toggle("darkmode");
+}
+</script>
 </body>
     
 </html>
