@@ -1,1 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Mineland Players</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            flex-direction: column;
+            padding: 0 10px;
+        }
 
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            width: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            z-index: 2;
+        }
+
+        li {
+            margin: 3px 0;
+            padding: 5px 0;
+            cursor: pointer;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        li:hover {
+            color: red;
+        }
+
+        @media (max-width: 768px) {
+            li {
+                font-size: 12px;
+            }
+        }
+a {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 3;
+}
+    </style>
+</head>
+<body>
+    <ul>
+        <li id="item-1" data-bg="https://hauzenex.github.io/topml/1cozmxo.png">1. Cozmox2000</li>
+        <li id="item-2" data-bg="https://placekitten.com/1920/1081">2. Yassounox</li>
+        <li id="item-3" data-bg="https://placekitten.com/1920/1082">3. GogaGamerVI</li>
+        <li id="item-4" data-bg="https://placekitten.com/1920/1083">4. mmxvsfff</li>
+        <li id="item-5" data-bg="https://placekitten.com/1920/1084">5. gigipro565</li>
+        <li id="item-6" data-bg="https://placekitten.com/1920/1085">6. TheKazama</li>
+        <li id="item-7" data-bg="https://placekitten.com/1920/1086">7. smootypie</li>
+        <li id="item-8" data-bg="https://placekitten.com/1920/1087">8. ahmedmag_work</li>
+        <li id="item-9" data-bg="https://placekitten.com/1920/1088">9. beguine</li>
+        <li id="item-10" data-bg="https://placekitten.com/1920/1089">10. mohamadNK</li>
+        <li id="item-11" data-bg="https://placekitten.com/1920/1090">11. Hatchet1212</li>
+        <li id="item-12" data-bg="https://placekitten.com/1920/1091">12. xDlyoudie</li>
+        <li id="item-13" data-bg="https://placekitten.com/1920/1092">13. XXAzzamXX</li>
+        <li id="item-14" data-bg="https://placekitten.com/1920/1093">14. Curios_Work2</li>
+        <li id="item-15" data-bg="https://hauzenex.github.io/topml/15hauzenex.png">15. Hauzenex</li>
+    </ul>
+
+    <script>
+        const listItems = document.querySelectorAll('li');
+
+        listItems.forEach(item => {
+            item.addEventListener('mouseover', () => {
+                const bgImage = item.getAttribute('data-bg');
+
+                document.body.style.backgroundImage = `url(${bgImage})`;
+                document.body.style.backgroundColor = 'transparent';
+            });
+            item.addEventListener('mouseout', () => {
+                document.body.style.backgroundImage = 'none';
+                document.body.style.backgroundColor = 'black';
+            });
+        });
+    </script>
+<a href="https://discord.gg/Ssvtv5snc2" style="color:#ffffff;">Discord Server</a>
+</body>
+</html>
